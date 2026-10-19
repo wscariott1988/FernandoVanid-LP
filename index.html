@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    </script>
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-XXXXXXXXXX',
+          'value': 1.0,
+          'currency': 'BRL',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    <script>
+      if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.className+=' js';}
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+    <meta name="robots" content="index,follow">
+
+    <title>Montador de Móveis em Alvorada e Viamão | Fernando Vinadé</title>
+    <meta name="description" content="Montagem e desmontagem de móveis em Alvorada e Viamão. Mais de 10 anos de experiência, maquinário próprio, ambiente limpo e 90 dias de garantia sobre erros de montagem. Orçamento pelo WhatsApp.">
+    <meta name="keywords" content="montador de móveis Alvorada, montador de móveis Viamão, montagem de móveis, desmontagem de móveis, assistência técnica móveis, instalação de TV, marcenaria Alvorada">
+    <link rel="canonical" href="https://fernandomontador.grupows.com/">
+
+    <meta property="og:title" content="Montador de Móveis em Alvorada e Viamão | Fernando Vinadé">
+    <meta property="og:description" content="Montagem e desmontagem de móveis com mais de 10 anos de experiência. Cuidado com piso e paredes, ambiente limpo ao finalizar e 90 dias de garantia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fernandomontador.grupows.com/">
+    <meta property="og:image" content="https://fernandomontador.grupows.com/public/hero.webp">
+    <meta property="og:image:width" content="420">
+    <meta property="og:image:height" content="525">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:alt" content="Fernando Vinadé, montador de móveis profissional em Alvorada e Viamão">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Fernando Vinadé - Montagem de Móveis">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Montador de Móveis em Alvorada e Viamão | Fernando Vinadé">
+    <meta name="twitter:description" content="Montagem e desmontagem de móveis com mais de 10 anos de experiência em Alvorada, Viamão e região. Orçamento pelo WhatsApp.">
+    <meta name="twitter:image" content="https://fernandomontador.grupows.com/public/hero.webp">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23121212'/><rect x='30' y='26' width='40' height='52' rx='7' fill='%23FFC000'/><rect x='24' y='20' width='52' height='18' rx='9' fill='%23FFC000'/></svg>">
+
+    <link rel="preload" as="image" fetchpriority="high"
+          href="public/hero.webp">
+
+    <link rel="preload" href="fonts/Oswald-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style>
+        @font-face{font-family:'Oswald';font-style:normal;font-weight:200 700;font-display:optional;src:url('fonts/Oswald-Variable.woff2') format('woff2')}
+        @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:optional;src:url('fonts/Barlow-400.woff2') format('woff2')}
+        @font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:optional;src:url('fonts/Barlow-600.woff2') format('woff2')}
+
+        /* ===== TOKENS — única fonte de cor da marca ===== */
+        :root{
+            --color-bg:#121212;
+            --color-surface:#1E1E1E;
+            --color-surface-soft:#181818;
+            --color-text:#F5F5F5;
+            --color-text-muted:#A6A6A6;
+            --color-primary:#FFC000;
+            --color-primary-strong:#D9A400;
+            --color-primary-soft:rgba(255,192,0,.12);
+            --color-primary-border:rgba(255,192,0,.34);
+            --color-on-primary:#121212;
+            --color-whatsapp:#25D366;
+            --color-whatsapp-strong:#1DA851;
+            --color-on-whatsapp:#FFFFFF;
+            --color-border:rgba(255,255,255,.08);
+            --color-border-strong:rgba(255,255,255,.16);
+            --color-ghost:rgba(255,255,255,.04);
+            --color-header:rgba(18,18,18,.86);
+            --color-number:rgba(255,255,255,.06);
+            --shadow-card:0 16px 34px rgba(0,0,0,.45);
+            --shadow-cta:0 10px 26px rgba(37,211,102,.30);
+            --shadow-frame:0 20px 50px rgba(0,0,0,.55);
+            --radius-sm:6px;--radius-md:8px;--radius-lg:16px;--radius-pill:999px;
+            --font-titles:'Oswald','Arial Narrow',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+            --font-body:'Barlow',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+            --transition-fast:all .2s cubic-bezier(.4,0,.2,1);
+            --transition-smooth:all .4s cubic-bezier(.4,0,.2,1);
+        }
+
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth;scroll-padding-top:88px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+        body{background-color:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
+        img{display:block;max-width:100%;height:auto}
+        a{color:inherit}
+        ul{list-style:none}
+        h1,h2,h3{font-family:var(--font-titles);line-height:1.12;letter-spacing:.4px}
+        .container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+        .skip-link{position:absolute;left:16px;top:-60px;z-index:200;background:var(--color-primary);color:var(--color-on-primary);font-family:var(--font-titles);font-weight:600;text-transform:uppercase;padding:10px 18px;border-radius:var(--radius-sm);text-decoration:none;transition:var(--transition-fast)}
+        .skip-link:focus{top:14px}
+        .icon{width:1em;height:1em;display:block;flex:none}
+
+        .btn-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-titles);font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.8px;line-height:1;text-decoration:none;text-align:center;padding:16px 30px;border-radius:var(--radius-md);border:2px solid transparent;cursor:pointer;background-color:var(--color-whatsapp);color:var(--color-on-whatsapp);box-shadow:var(--shadow-cta);transition:var(--transition-smooth)}
+        .btn-cta:hover,.btn-cta:focus-visible{background-color:var(--color-whatsapp-strong);transform:translateY(-2px)}
+        .btn-cta:active{transform:translateY(0)}
+        .btn-cta .icon-whatsapp{width:20px;height:20px}
+        .btn-cta--sm{padding:11px 18px;font-size:.82rem;letter-spacing:.6px}
+        .btn-cta--sm .icon-whatsapp{width:17px;height:17px}
+        .btn-ghost{background-color:transparent;color:var(--color-text);border-color:var(--color-border-strong);box-shadow:none}
+        .btn-ghost:hover,.btn-ghost:focus-visible{background-color:var(--color-ghost);border-color:var(--color-primary);color:var(--color-primary)}
+
+        .main-header{position:fixed;top:0;left:0;right:0;z-index:100;background-color:var(--color-header);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-border);padding:12px 0}
+        .header-container{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .logo{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+        .logo-text{font-family:var(--font-titles);font-weight:700;font-size:1.3rem;text-transform:uppercase;letter-spacing:.6px;line-height:1;white-space:nowrap}
+        .logo-accent{color:var(--color-primary)}
+        .logo-sub{display:block;font-family:var(--font-body);font-weight:600;font-size:.62rem;letter-spacing:1.8px;text-transform:uppercase;color:var(--color-text-muted);margin-top:3px}
+
+        .hero-section{position:relative;padding:128px 0 72px;background:linear-gradient(180deg,var(--color-bg) 0%,var(--color-surface) 100%);overflow:hidden}
+        .hero-container{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;background-color:var(--color-primary-soft);border:1px solid var(--color-primary-border);color:var(--color-primary);font-family:var(--font-titles);font-weight:600;font-size:.8rem;letter-spacing:1.4px;text-transform:uppercase;padding:8px 16px;border-radius:var(--radius-pill);margin-bottom:22px}
+        .hero-title{font-size:2.7rem;font-weight:700;text-transform:uppercase;margin-bottom:18px}
+        .hero-title .text-accent{color:var(--color-primary)}
+        .hero-subtitle{font-size:1.1rem;color:var(--color-text-muted);max-width:560px;margin-bottom:30px}
+        .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+        .hero-trust{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:24px;font-size:.85rem;color:var(--color-text-muted);font-weight:600}
+        .hero-trust li{display:flex;align-items:center;gap:8px}
+        .hero-trust .icon{width:16px;height:16px;color:var(--color-primary)}
+        .hero-image-wrapper{position:relative;display:flex;justify-content:center;width:100%;max-width:420px;margin:0 auto;aspect-ratio:4/5}
+        .hero-image-wrapper::before{content:"";position:absolute;inset:16px -16px -16px 16px;border:2px solid var(--color-primary);border-radius:var(--radius-lg);z-index:0}
+        .hero-image{position:relative;z-index:1;width:100%;max-width:420px;height:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);border:1px solid var(--color-border-strong);box-shadow:var(--shadow-frame)}
+
+        @media(max-width:900px){
+            .logo-sub{display:none}
+            .hero-section{padding:106px 0 58px}
+            .hero-container{grid-template-columns:1fr;text-align:center;gap:34px}
+            .hero-badge{font-size:.74rem}
+            .hero-title{font-size:2rem}
+            .hero-subtitle{margin-left:auto;margin-right:auto}
+            .hero-actions,.hero-trust{justify-content:center}
+            .hero-actions .btn-cta{width:100%;max-width:340px}
+            .hero-image-wrapper{max-width:290px}
+            .hero-image-wrapper::before{inset:12px -12px -12px 12px}
+        }
+    </style>
+
+    <style>
+        .stripe{height:6px;background:repeating-linear-gradient(45deg,var(--color-primary) 0 12px,var(--color-bg) 12px 24px)}
+        .section{padding:76px 0}
+        .section-head{margin-bottom:40px}
+        .section-head--center{display:flex;flex-direction:column;align-items:center;text-align:center}
+        .section-tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-titles);font-weight:600;font-size:.78rem;letter-spacing:2.4px;text-transform:uppercase;color:var(--color-primary)}
+        .section-tag::before{content:"";width:26px;height:2px;background-color:var(--color-primary)}
+        .section-title{font-size:2rem;font-weight:700;text-transform:uppercase;margin:12px 0 12px}
+        .section-sub{color:var(--color-text-muted);max-width:660px}
+        .section-cta{display:flex;justify-content:center;margin-top:36px}
+
+        .features{background-color:var(--color-surface-soft);border-bottom:1px solid var(--color-border);padding:38px 0}
+        .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+        .feature{display:flex;gap:16px;align-items:flex-start}
+        .feature-icon{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:var(--radius-md);background-color:var(--color-primary-soft);border:1px solid var(--color-primary-border);color:var(--color-primary)}
+        .feature-icon .icon{width:24px;height:24px}
+        .feature-title{font-family:var(--font-titles);font-weight:600;font-size:1.02rem;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+        .feature-text{font-size:.9rem;color:var(--color-text-muted);line-height:1.5}
+
+        .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+        .card{position:relative;background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:32px 26px;transition:var(--transition-smooth)}
+        .card:hover{border-color:var(--color-primary-border);transform:translateY(-4px);box-shadow:var(--shadow-card)}
+        .card-num{position:absolute;top:16px;right:22px;font-family:var(--font-titles);font-weight:700;font-size:2.6rem;line-height:1;color:var(--color-number)}
+        .card-icon{width:56px;height:56px;display:grid;place-items:center;border-radius:var(--radius-md);background-color:var(--color-primary-soft);border:1px solid var(--color-primary-border);color:var(--color-primary);margin-bottom:20px}
+        .card-icon .icon{width:28px;height:28px}
+        .card-title{font-size:1.28rem;font-weight:600;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+        .card-text{font-size:.94rem;color:var(--color-text-muted)}
+        .card-list{margin-top:16px;display:grid;gap:9px}
+        .card-list li{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--color-text-muted)}
+        .card-list .icon{width:15px;height:15px;margin-top:3px;color:var(--color-primary)}
+
+        .trust{background-color:var(--color-surface-soft);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+        .trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+        .trust-text{color:var(--color-text-muted);margin-bottom:28px}
+        .trust-list{display:grid;gap:14px}
+        .trust-item{display:flex;gap:16px;align-items:flex-start;background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:18px 20px}
+        .trust-icon{width:44px;height:44px;flex:none;display:grid;place-items:center;border-radius:var(--radius-sm);background-color:var(--color-primary-soft);border:1px solid var(--color-primary-border);color:var(--color-primary)}
+        .trust-icon .icon{width:22px;height:22px}
+        .trust-title{font-family:var(--font-titles);font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.7px;margin-bottom:3px}
+        .trust-desc{font-size:.89rem;color:var(--color-text-muted);line-height:1.5}
+
+        .testimonials-track{display:flex;align-items:flex-start;gap:18px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--color-primary-border) transparent;padding:4px 4px 20px;margin:0 -4px}
+        .testimonials-track::-webkit-scrollbar{height:6px}
+        .testimonials-track::-webkit-scrollbar-thumb{background-color:var(--color-primary-border);border-radius:var(--radius-pill)}
+        .tcard{flex:0 0 min(82vw,330px);scroll-snap-align:start;background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:26px 24px}
+        .tstars{display:flex;gap:3px;color:var(--color-primary);margin-bottom:14px}
+        .tstars .icon{width:17px;height:17px}
+        .tquote{font-size:.95rem;color:var(--color-text-muted);margin-bottom:18px}
+        .tauthor{display:flex;align-items:center;gap:12px}
+        .tavatar{width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:50%;background-color:var(--color-primary-soft);border:1px solid var(--color-primary-border);color:var(--color-primary);font-family:var(--font-titles);font-weight:600;font-size:.95rem;text-transform:uppercase}
+        .tname{display:block;font-family:var(--font-titles);font-weight:600;font-size:.98rem;text-transform:uppercase;letter-spacing:.5px;line-height:1.2}
+        .tcity{display:block;font-size:.8rem;color:var(--color-text-muted)}
+        .testimonials-hint{display:block;text-align:center;font-size:.8rem;color:var(--color-text-muted);margin-top:6px}
+        .testimonials-carousel{position:relative}
+        .tcarousel-btn{display:none;position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:1px solid var(--color-primary-border);border-radius:50%;background-color:var(--color-surface);color:var(--color-primary);font-size:1.7rem;line-height:1;cursor:pointer;box-shadow:var(--shadow-card);transition:var(--transition-fast)}
+        .tcarousel-btn:hover,.tcarousel-btn:focus-visible{background-color:var(--color-primary);color:var(--color-on-primary)}
+        .tcarousel-btn:disabled{opacity:.35;cursor:not-allowed}
+        .tcarousel-prev{left:-6px}
+        .tcarousel-next{right:-6px}
+
+        .site-footer{background-color:var(--color-bg);border-top:1px solid var(--color-border);padding:60px 0 26px}
+        .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:38px}
+        .footer-brand-text{color:var(--color-text-muted);font-size:.92rem;margin:16px 0 22px;max-width:340px}
+        .footer-title{font-family:var(--font-titles);font-weight:600;font-size:.95rem;text-transform:uppercase;letter-spacing:1.4px;color:var(--color-primary);margin-bottom:16px}
+        .footer-list{display:grid;gap:10px;font-size:.9rem;color:var(--color-text-muted)}
+        .footer-list li{display:flex;gap:9px;align-items:flex-start}
+        .footer-list .icon{width:15px;height:15px;margin-top:4px;color:var(--color-primary)}
+        .footer-list a{text-decoration:none;transition:var(--transition-fast)}
+        .footer-list a:hover,.footer-list a:focus-visible{color:var(--color-primary)}
+        .footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px solid var(--color-border);margin-top:38px;padding-top:20px;font-size:.8rem;color:var(--color-text-muted)}
+
+        .wa-float{position:fixed;right:18px;bottom:18px;z-index:120;width:60px;height:60px;display:grid;place-items:center;border:0;border-radius:50%;background-color:var(--color-whatsapp);color:var(--color-on-whatsapp);box-shadow:var(--shadow-cta);cursor:pointer;transition:var(--transition-smooth)}
+        .wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;background-color:var(--color-whatsapp);opacity:.55;z-index:-1;animation:wa-pulse 2.4s ease-out infinite}
+        .wa-float .icon-whatsapp{width:32px;height:32px}
+        .wa-float:hover,.wa-float:focus-visible{background-color:var(--color-whatsapp-strong);transform:scale(1.06)}
+        @keyframes wa-pulse{0%{transform:scale(1);opacity:.55}70%{transform:scale(1.65);opacity:0}100%{transform:scale(1.65);opacity:0}}
+
+        /* Efeitos de hover leves (apenas transform/border-color) */
+        .hero-badge{transition:transform .3s cubic-bezier(.4,0,.2,1)}
+        .hero-image{transition:transform .5s cubic-bezier(.4,0,.2,1)}
+        .feature-icon{transition:transform .3s cubic-bezier(.4,0,.2,1)}
+        .card-icon{transition:transform .3s cubic-bezier(.4,0,.2,1)}
+        .trust-item{transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .3s cubic-bezier(.4,0,.2,1)}
+        .tcard{transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .3s cubic-bezier(.4,0,.2,1)}
+
+        @media (hover:hover) and (pointer:fine){
+            .card:hover .card-icon{transform:scale(1.08)}
+            .feature:hover .feature-icon{transform:scale(1.08)}
+            .trust-item:hover{transform:translateX(4px);border-color:var(--color-primary-border)}
+            .tcard:hover{transform:translateY(-3px);border-color:var(--color-primary-border)}
+            .hero-image-wrapper:hover .hero-image{transform:scale(1.02)}
+            .hero-badge:hover{transform:translateY(-2px)}
+        }
+
+        /* Revelacao ao rolar (sutil, so opacity/transform) */
+        .reveal{opacity:1}
+        .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1)}
+        .js .reveal.in{opacity:1;transform:none}
+
+        /* Header reagindo a rolagem (so sombra) */
+        .main-header{transition:box-shadow .3s cubic-bezier(.4,0,.2,1)}
+        .main-header.is-scrolled{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+
+        /* Parallax leve na moldura da hero (CSS scroll-driven, zero JS) */
+        @keyframes hero-frame{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-26px,0)}}
+        @supports (animation-timeline: scroll()){
+            .hero-image-wrapper::before{animation:hero-frame linear both;animation-timeline:scroll(root);animation-range:0 640px}
+        }
+
+        @media(min-width:900px){
+            .testimonials-track{gap:22px;padding:0;margin:0;align-items:flex-start;scrollbar-width:none;-ms-overflow-style:none}
+            .testimonials-track::-webkit-scrollbar{display:none}
+            .tcard{flex:0 0 calc(33.333% - 15px)}
+            .tcarousel-btn{display:flex}
+            .testimonials-hint{display:none}
+        }
+        @media(max-width:900px){
+            .section{padding:56px 0}
+            .section-title{font-size:1.6rem}
+            .features-grid,.services-grid,.trust-grid,.footer-grid{grid-template-columns:1fr}
+            .trust-grid{gap:30px}
+        }
+        @media(max-width:480px){
+            .logo-text{font-size:1.1rem}
+            .footer-bottom{flex-direction:column}
+        }
+        @media(prefers-reduced-motion:reduce){
+            html{scroll-behavior:auto}
+            *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+            .js .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+            .hero-image-wrapper::before{animation:none !important}
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Fernando Vinadé - Montagem de Móveis",
+      "description": "Montagem e desmontagem de móveis, assistência técnica, reparos e fixações em Alvorada e Viamão.",
+      "url": "https://fernandomontador.grupows.com/",
+      "image": "https://fernandomontador.grupows.com/public/hero.webp",
+      "telephone": "+5551998694747",
+      "areaServed": [
+        {"@type": "City", "name": "Alvorada"},
+        {"@type": "City", "name": "Viamão"}
+      ],
+      "address": {"@type": "PostalAddress", "addressLocality": "Alvorada", "addressRegion": "RS", "addressCountry": "BR"},
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de montagem",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Montagem e desmontagem de móveis"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Assistência técnica e reparos"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fixações e instalações"}}
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
+        <defs>
+            <symbol id="ic-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+            <symbol id="ic-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 5.9 6.5.95-4.71 4.6 1.11 6.5L12 17.5l-5.8 3.05 1.11-6.5-4.71-4.6 6.5-.95L12 2.6Z"/></symbol>
+            <symbol id="ic-zap" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></symbol>
+            <symbol id="ic-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z"/><path d="M9.5 21.5v-7h5v7"/></symbol>
+            <symbol id="ic-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+            <symbol id="ic-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3.5" width="20" height="13.5" rx="2.2"/><path d="M8 21h8M12 17v4"/></symbol>
+            <symbol id="ic-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.27 6.96 8.73 5.05 8.73-5.05"/><path d="M12 22.08V12"/></symbol>
+            <symbol id="ic-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.2"/><path d="M2 10h20M6.5 15h4"/></symbol>
+            <symbol id="ic-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+            <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+            <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+            <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        </defs>
+    </svg>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a class="logo" href="#conteudo" aria-label="Fernando Vinadé - Montagem de Móveis">
+                <span>
+                    <span class="logo-text">Fernando <span class="logo-accent">Vinadé</span></span>
+                    <span class="logo-sub">Montagem de Móveis</span>
+                </span>
+            </a>
+            <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta btn-cta--sm" id="btn-header-whatsapp"
+               onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">
+                <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+                <span>Orçamento</span>
+            </a>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-badge">⭐ Mais de 10 anos de experiência</p>
+                    <h1 class="hero-title" id="hero-title">Montador de Móveis Profissional em <span class="text-accent">Alvorada e Viamão</span></h1>
+                    <p class="hero-subtitle">Montagem e desmontagem rápida de móveis comprados na internet ou lojas físicas. Cuidado total com seu piso e paredes, com ambiente limpo ao finalizar.</p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta" id="btn-hero-whatsapp"
+                           onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">
+                            <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+                            <span>Solicitar Orçamento</span>
+                        </a>
+                        <a href="#servicos" class="btn-cta btn-ghost">Ver serviços</a>
+                    </div>
+                    <ul class="hero-trust">
+                        <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Garantia de 90 dias</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Ambiente limpo ao finalizar</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Encaixe no mesmo dia</li>
+                    </ul>
+                </div>
+                <div class="hero-image-wrapper">
+                    <picture>
+                        <source srcset="public/hero.webp" type="image/webp">
+                        <img src="public/hero.webp" alt="Fernando Vinadé, montador de móveis profissional em Alvorada e Viamão" class="hero-image" fetchpriority="high" width="420" height="525">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <div class="stripe" aria-hidden="true"></div>
+
+        <section class="features" aria-label="Diferenciais do atendimento">
+            <div class="container">
+                <ul class="features-grid reveal">
+                    <li class="feature">
+                        <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#ic-card"/></svg></span>
+                        <div>
+                            <h2 class="feature-title">Cartão de crédito</h2>
+                            <p class="feature-text">Aceita as principais bandeiras para facilitar o pagamento.</p>
+                        </div>
+                    </li>
+                    <li class="feature">
+                        <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#ic-zap"/></svg></span>
+                        <div>
+                            <h2 class="feature-title">Agilidade</h2>
+                            <p class="feature-text">Possibilidade de encaixe para o mesmo dia, conforme a agenda.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="servicos" aria-labelledby="servicos-title">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <span class="section-tag">Serviços</span>
+                    <h2 class="section-title" id="servicos-title">O que eu faço para você</h2>
+                    <p class="section-sub">Atendimento em Alvorada, Viamão e região — para móveis de lojas físicas ou comprados pela internet.</p>
+                </div>
+                <div class="services-grid reveal">
+                    <article class="card">
+                        <span class="card-num" aria-hidden="true">01</span>
+                        <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#ic-package"/></svg></span>
+                        <h3 class="card-title">Montagem e Desmontagem Geral</h3>
+                        <p class="card-text">Montagem completa de móveis novos e desmontagem cuidadosa para mudanças.</p>
+                        <ul class="card-list">
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Guarda-roupas, camas, beliches e cômodas</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Mesas, escrivaninhas, estantes e painéis</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Móveis comprados pela internet ou em lojas</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <span class="card-num" aria-hidden="true">02</span>
+                        <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#ic-gear"/></svg></span>
+                        <h3 class="card-title">Assistência Técnica e Reparos</h3>
+                        <p class="card-text">Manutenção e regulagem de ferragens para o móvel voltar a funcionar bem.</p>
+                        <ul class="card-list">
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Troca e ajuste de dobradiças</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Corrediças e trilhos de gaveta</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Rodízios e regulagem de portas</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <span class="card-num" aria-hidden="true">03</span>
+                        <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#ic-tv"/></svg></span>
+                        <h3 class="card-title">Fixações e Instalações</h3>
+                        <p class="card-text">Instalações firmes e alinhadas, com fixação correta para cada tipo de parede.</p>
+                        <ul class="card-list">
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Suportes de TV na parede</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Painéis, prateleiras e nichos</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Varas e suportes de cortina</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="section-cta reveal">
+                    <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta" id="btn-services-whatsapp"
+                       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Pedir orçamento pelo WhatsApp">
+                        <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+                        <span>Pedir Orçamento Agora</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section trust" aria-labelledby="confianca-title">
+            <div class="container trust-grid">
+                <div>
+                    <span class="section-tag">Confiança</span>
+                    <h2 class="section-title" id="confianca-title">Serviço sério, do início ao fim</h2>
+                    <p class="trust-text">Trabalho com ferramentas e maquinário próprios, sem improviso. Cada móvel é montado no tempo certo, com peças conferidas uma a uma. Ao terminar, deixo o ambiente limpo e organizado — como encontrei.</p>
+                    <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta" id="btn-trust-whatsapp"
+                       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Falar com Fernando pelo WhatsApp">
+                        <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+                        <span>Falar com o Fernando</span>
+                    </a>
+                </div>
+                <ul class="trust-list reveal">
+                    <li class="trust-item">
+                        <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-home"/></svg></span>
+                        <div>
+                            <h3 class="trust-title">Maquinário próprio</h3>
+                            <p class="trust-desc">Ferramentas e equipamentos completos, sem gambiarras e sem depender de terceiros.</p>
+                        </div>
+                    </li>
+                    <li class="trust-item">
+                        <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg></span>
+                        <div>
+                            <h3 class="trust-title">Cuidado com piso e paredes</h3>
+                            <p class="trust-desc">Proteção nas áreas de trabalho e ambiente limpo ao finalizar o serviço.</p>
+                        </div>
+                    </li>
+                    <li class="trust-item">
+                        <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#ic-shield"/></svg></span>
+                        <div>
+                            <h3 class="trust-title">90 dias de garantia</h3>
+                            <p class="trust-desc">Garantia de 90 dias sobre qualquer erro de montagem. Se algo ficar fora do lugar, eu volto.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="depoimentos-title">
+            <div class="container">
+                <div class="section-head section-head--center reveal">
+                    <span class="section-tag">Depoimentos</span>
+                    <h2 class="section-title" id="depoimentos-title">Clientes de Alvorada e Viamão</h2>
+                    <p class="section-sub">Veja o que dizem quem já contratou a montagem, o reparo ou a instalação.</p>
+                </div>
+                <div class="testimonials-carousel">
+                    <button class="tcarousel-btn tcarousel-prev" type="button" aria-label="Depoimentos anteriores" aria-controls="testimonials-track">&#8249;</button>
+                    <div class="testimonials-track" id="testimonials-track" role="region" aria-label="Depoimentos de clientes" tabindex="0">
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Tive uma experiência simplesmente perfeita com o Fernando, ele montou 4 móveis aqui em casa, cozinha completa, mesa de jantar, roupeiro e meu rack da sala. Eu como tenho meus horários ruins de agenda combinei de deixar as chaves da minha casa com ele, acessou e deixou tudo perfeito, super indico e é muito de confiança."</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">A</span>
+                            <span>
+                                <span class="tname">Alex Pereira</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Super indico. Trabalho impecável, caprichoso, rápido e preço justo. E muito simpáticos sempre. Só chamo eles. ❤️"</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">C</span>
+                            <span>
+                                <span class="tname">Camila Estrazulas</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Excelente montador, comprometimento com os horários marcados, preço justo e montagem certa, sem danificar os móveis. Já fez mais de 4 montagens para mim. Super indico o trabalho dele."</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">F</span>
+                            <span>
+                                <span class="tname">Fabiana</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Atendimento excelente, Fernando é muito profissional. O serviço foi realizado com pontualidade, organização e capricho! Recomendo muito."</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">B</span>
+                            <span>
+                                <span class="tname">Bruno José Medeiros</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Ótimo montador muito competente montou super rápido preço acessível recomendo demais"</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">R</span>
+                            <span>
+                                <span class="tname">Rubens Junior</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Super caprichosos,rápidos e preço justo indico de olhos fechados"</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">C</span>
+                            <span>
+                                <span class="tname">Carolzinha Brun</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Profissional muito responsável, educado, e com o serviço perfeito!"</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">C</span>
+                            <span>
+                                <span class="tname">Carlos Ramos</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Serviço de qualidade, pontual e rápido! Gentil e confiável! Obrigada pelo excelente atendimento!"</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">L</span>
+                            <span>
+                                <span class="tname">Luana Rossi</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="tcard">
+                        <div class="tstars" role="img" aria-label="5 de 5 estrelas">
+                            <svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg>
+                        </div>
+                        <p class="tquote">"Rápido e serviço de qualidade!"</p>
+                        <div class="tauthor">
+                            <span class="tavatar" aria-hidden="true">J</span>
+                            <span>
+                                <span class="tname">Juliano Martins Soares</span>
+                                <span class="tcity">Avaliação no Google</span>
+                            </span>
+                        </div>
+                    </article>
+                    </div>
+                    <button class="tcarousel-btn tcarousel-next" type="button" aria-label="Próximos depoimentos" aria-controls="testimonials-track">&#8250;</button>
+                </div>
+                <span class="testimonials-hint">Arraste para o lado para ver mais →</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="logo-text">Fernando <span class="logo-accent">Vinadé</span></span>
+                    <p class="footer-brand-text">Montagem, desmontagem e manutenção de móveis com mais de 10 anos de experiência em Alvorada, Viamão e região.</p>
+                    <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta btn-cta--sm" id="btn-footer-whatsapp"
+                       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+                        <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+                        <span>Chamar no WhatsApp</span>
+                    </a>
+                </div>
+                <div>
+                    <h2 class="footer-title">Atendimento</h2>
+                    <ul class="footer-list">
+                        <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Alvorada, Viamão e região — RS</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Segunda a Sábado, das 8h às 19h</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#ic-check"/></svg>Encaixe no mesmo dia, conforme a agenda</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="footer-title">Contato</h2>
+                    <ul class="footer-list">
+                        <li><svg class="icon" aria-hidden="true"><use href="#ic-phone"/></svg><a href="tel:+5551998694747" id="btn-footer-phone">(51) 99869-4747</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Fernando Vinadé — Montagem de Móveis. Todos os direitos reservados.</span>
+                <span>Alvorada / Viamão — RS</span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="wa-float" id="btn-floating-whatsapp"
+       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+    </a>
+
+    <script>
+      function loadGTag() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+        s.async = true;
+        s.onload = function() {
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        };
+        document.head.appendChild(s);
+      }
+      document.addEventListener('click', loadGTag, { once: true });
+      document.addEventListener('touchstart', loadGTag, { once: true });
+    </script>
+
+    <script>
+      (function(){
+        var track = document.getElementById('testimonials-track');
+        if(!track) return;
+        var prev = document.querySelector('.tcarousel-prev');
+        var next = document.querySelector('.tcarousel-next');
+
+        function step(){
+          var card = track.querySelector('.tcard');
+          if(!card) return track.clientWidth;
+          var styles = getComputedStyle(track);
+          var gap = parseFloat(styles.columnGap || styles.gap) || 22;
+          return card.getBoundingClientRect().width + gap;
+        }
+        function update(){
+          var max = track.scrollWidth - track.clientWidth;
+          if(prev) prev.disabled = track.scrollLeft <= 1;
+          if(next) next.disabled = track.scrollLeft >= max - 1;
+        }
+        if(prev){ prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); }); }
+        if(next){ next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); }); }
+        track.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+      })();
+    </script>
+
+    <script>
+      (function(){
+        if(!('IntersectionObserver' in window)) return;
+
+        var reveals = document.querySelectorAll('.reveal');
+        if(reveals.length){
+          var io = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+              if(entry.isIntersecting){
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
+              }
+            });
+          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+          reveals.forEach(function(el){ io.observe(el); });
+        }
+
+        var header = document.querySelector('.main-header');
+        if(header){
+          var sentinel = document.createElement('div');
+          sentinel.setAttribute('aria-hidden', 'true');
+          sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none';
+          document.body.insertBefore(sentinel, document.body.firstChild);
+          new IntersectionObserver(function(entries){
+            header.classList.toggle('is-scrolled', !entries[0].isIntersecting);
+          }, { threshold: 0 }).observe(sentinel);
+        }
+      })();
+    </script>
+</body>
+</html>
