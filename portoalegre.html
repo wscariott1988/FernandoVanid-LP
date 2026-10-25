@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://www.googletagmanager.com">
+
     <script>
+      window.FV_CONSENT_CONFIG = { key: 'fv_consent_v2', version: 1 };
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') { window.location = url; }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-XXXXXXXXXX',
-          'value': 1.0,
-          'currency': 'BRL',
-          'event_callback': callback
+
+      var storedConsent = null;
+      try { storedConsent = JSON.parse(localStorage.getItem(window.FV_CONSENT_CONFIG.key)); } catch (e) {}
+      var hasStoredConsent = storedConsent && storedConsent.v === window.FV_CONSENT_CONFIG.version && typeof storedConsent.analytics === 'boolean' && typeof storedConsent.ads === 'boolean';
+      var analyticsConsent = hasStoredConsent && storedConsent.analytics === true;
+      var adsConsent = hasStoredConsent && storedConsent.ads === true;
+
+      gtag('consent', 'default', {
+        ad_storage: adsConsent ? 'granted' : 'denied',
+        ad_user_data: adsConsent ? 'granted' : 'denied',
+        ad_personalization: adsConsent ? 'granted' : 'denied',
+        analytics_storage: analyticsConsent ? 'granted' : 'denied',
+        security_storage: 'granted',
+        wait_for_update: 500
       });
-      return false;
-    }
     </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PN3D6KW3');</script>
+    <!-- End Google Tag Manager -->
     <script>
       if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.className+=' js';}
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#121212">
     <meta name="robots" content="index,follow">
 
@@ -229,6 +239,40 @@
         .wa-float:hover,.wa-float:focus-visible{background-color:var(--color-whatsapp-strong);transform:scale(1.06)}
         @keyframes wa-pulse{0%{transform:scale(1);opacity:.55}70%{transform:scale(1.65);opacity:0}100%{transform:scale(1.65);opacity:0}}
 
+        .footer-consent-link{background:none;border:0;padding:0;font:inherit;color:var(--color-text-muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+        .footer-consent-link:hover,.footer-consent-link:focus-visible{color:var(--color-primary)}
+        body.consent-visible{padding-bottom:var(--consent-banner-h,0px)}
+        body.consent-visible .wa-float{bottom:calc(18px + var(--consent-banner-h,0px))}
+
+        .consent-banner{position:fixed;left:0;right:0;bottom:0;z-index:130;max-height:calc(100vh - 12px);overflow-y:auto;background-color:var(--color-surface);border-top:1px solid var(--color-primary-border);box-shadow:0 -10px 30px rgba(0,0,0,.4);padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px))}
+        .consent-banner[hidden]{display:none}
+        .consent-inner{width:100%;max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px 22px;flex-wrap:wrap}
+        .consent-copy{flex:1 1 320px;min-width:0}
+        .consent-title{font-family:var(--font-titles);font-weight:600;font-size:.92rem;text-transform:uppercase;letter-spacing:.8px;color:var(--color-text)}
+        .consent-desc{margin-top:3px;font-size:.8rem;line-height:1.45;color:var(--color-text-muted)}
+        .consent-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+        .consent-btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 16px;border:1px solid var(--color-border-strong);border-radius:var(--radius-sm);background:transparent;color:var(--color-text);font-family:var(--font-titles);font-weight:600;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;line-height:1;cursor:pointer;transition:var(--transition-fast)}
+        .consent-btn:hover,.consent-btn:focus-visible{border-color:var(--color-primary);color:var(--color-primary)}
+        .consent-btn--primary{background-color:var(--color-primary);border-color:var(--color-primary);color:var(--color-on-primary)}
+        .consent-btn--primary:hover,.consent-btn--primary:focus-visible{background-color:var(--color-primary-strong);border-color:var(--color-primary-strong);color:var(--color-on-primary)}
+        .consent-btn:focus-visible,.footer-consent-link:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px}
+        .consent-preferences{width:100%;max-width:1200px;margin:12px auto 0;padding-top:12px;border-top:1px solid var(--color-border);display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap}
+        .consent-preferences[hidden]{display:none}
+        .consent-field{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;color:var(--color-text);cursor:pointer}
+        .consent-field input{width:16px;height:16px;accent-color:var(--color-primary);cursor:pointer}
+        .consent-required{font-size:.78rem;color:var(--color-text-muted)}
+        .consent-save{margin-left:auto}
+
+        @media(max-width:640px){
+            .consent-banner{padding:12px 14px calc(12px + env(safe-area-inset-bottom,0px))}
+            .consent-inner{gap:10px}
+            .consent-copy{flex-basis:100%}
+            .consent-actions{width:100%;gap:6px}
+            .consent-btn{flex:1 1 0;min-width:0;padding:10px 8px;font-size:.72rem}
+            .consent-preferences{gap:10px 14px}
+            .consent-save{margin-left:0;width:100%}
+        }
+
         /* Efeitos de hover leves (apenas transform/border-color) */
         .hero-badge{transition:transform .3s cubic-bezier(.4,0,.2,1)}
         .hero-image{transition:transform .5s cubic-bezier(.4,0,.2,1)}
@@ -320,6 +364,10 @@
     </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN3D6KW3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
     <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
@@ -348,7 +396,7 @@
                 </span>
             </a>
             <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta btn-cta--sm" id="btn-header-whatsapp"
-               onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">
+               target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">
                 <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
                 <span>Orçamento</span>
             </a>
@@ -364,7 +412,7 @@
                     <p class="hero-subtitle">Montagem e desmontagem rápida de móveis em Porto Alegre e região, comprados na internet ou em lojas físicas. Cuidado total com seu piso e paredes e ambiente limpo ao finalizar. Também atendo Viamão e Alvorada.</p>
                     <div class="hero-actions">
                         <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta" id="btn-hero-whatsapp"
-                           onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">
+                           target="_blank" rel="noopener" aria-label="Solicitar orçamento pelo WhatsApp">
                             <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
                             <span>Solicitar Orçamento</span>
                         </a>
@@ -452,7 +500,7 @@
                 </div>
                 <div class="section-cta reveal">
                     <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta" id="btn-services-whatsapp"
-                       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Pedir orçamento pelo WhatsApp">
+                       target="_blank" rel="noopener" aria-label="Pedir orçamento pelo WhatsApp">
                         <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
                         <span>Pedir Orçamento Agora</span>
                     </a>
@@ -467,7 +515,7 @@
                     <h2 class="section-title" id="confianca-title">Serviço sério, do início ao fim</h2>
                     <p class="trust-text">Trabalho com ferramentas e maquinário próprios, sem improviso. Cada móvel é montado no tempo certo, com peças conferidas uma a uma. Ao terminar, deixo o ambiente limpo e organizado — como encontrei.</p>
                     <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta" id="btn-trust-whatsapp"
-                       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Falar com Fernando pelo WhatsApp">
+                       target="_blank" rel="noopener" aria-label="Falar com Fernando pelo WhatsApp">
                         <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
                         <span>Falar com o Fernando</span>
                     </a>
@@ -670,7 +718,7 @@
                     <span class="logo-text">Fernando <span class="logo-accent">Vinadé</span></span>
                     <p class="footer-brand-text">Montagem, desmontagem e manutenção de móveis com mais de 10 anos de experiência em Porto Alegre, Viamão, Alvorada e região.</p>
                     <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-cta btn-cta--sm" id="btn-footer-whatsapp"
-                       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+                       target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
                         <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
                         <span>Chamar no WhatsApp</span>
                     </a>
@@ -694,28 +742,177 @@
             <div class="footer-bottom">
                 <span>© 2026 Fernando Vinadé — Montagem de Móveis. Todos os direitos reservados.</span>
                 <span>Porto Alegre — RS · <a href="/">Atendimento também em Alvorada e Viamão</a></span>
+                <button type="button" class="footer-consent-link" data-consent-open>Preferências de cookies</button>
             </div>
         </div>
     </footer>
 
     <a href="https://wa.me/5551998694747?text=Ol%C3%A1%2C%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20or%C3%A7amento" class="wa-float" id="btn-floating-whatsapp"
-       onclick="gtag_report_conversion();" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+       target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
         <svg class="icon icon-whatsapp" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
     </a>
 
+    <section class="consent-banner" id="consent-banner" role="region" aria-labelledby="consent-title" aria-describedby="consent-desc" hidden>
+        <div class="consent-inner">
+            <div class="consent-copy">
+                <p class="consent-title" id="consent-title">Cookies e privacidade</p>
+                <p class="consent-desc" id="consent-desc">Usamos cookies para análise e publicidade. Os cookies opcionais ficam desativados até sua escolha.</p>
+            </div>
+            <div class="consent-actions">
+                <button type="button" class="consent-btn" data-consent-action="reject">Rejeitar</button>
+                <button type="button" class="consent-btn" data-consent-action="preferences" aria-expanded="false" aria-controls="consent-preferences">Preferências</button>
+                <button type="button" class="consent-btn consent-btn--primary" data-consent-action="accept">Aceitar</button>
+            </div>
+        </div>
+        <div class="consent-preferences" id="consent-preferences" hidden>
+            <label class="consent-field"><input type="checkbox" data-consent-type="analytics"> Análise de uso</label>
+            <label class="consent-field"><input type="checkbox" data-consent-type="ads"> Publicidade</label>
+            <span class="consent-required">Cookies necessários: sempre ativos</span>
+            <button type="button" class="consent-btn consent-btn--primary consent-save" data-consent-action="save">Salvar preferências</button>
+        </div>
+    </section>
+    <span class="sr-only" role="status" aria-live="polite" id="consent-status"></span>
+
     <script>
-      function loadGTag() {
-        var s = document.createElement('script');
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-        s.async = true;
-        s.onload = function() {
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
-        };
-        document.head.appendChild(s);
-      }
-      document.addEventListener('click', loadGTag, { once: true });
-      document.addEventListener('touchstart', loadGTag, { once: true });
+      (function(){
+        var config = window.FV_CONSENT_CONFIG || { key: 'fv_consent_v2', version: 1 };
+        var banner = document.getElementById('consent-banner');
+        if(!banner) return;
+        var prefs = document.getElementById('consent-preferences');
+        var status = document.getElementById('consent-status');
+        var prefsBtn = banner.querySelector('[data-consent-action="preferences"]');
+        var analyticsBox = banner.querySelector('[data-consent-type="analytics"]');
+        var adsBox = banner.querySelector('[data-consent-type="ads"]');
+        var openTrigger = null;
+
+        function readConsent(){
+          try {
+            var data = JSON.parse(localStorage.getItem(config.key));
+            if(data && data.v === config.version && typeof data.analytics === 'boolean' && typeof data.ads === 'boolean') return data;
+          } catch(e) {}
+          return null;
+        }
+
+        function writeConsent(analytics, ads, choice){
+          var data = { v: config.version, analytics: !!analytics, ads: !!ads, choice: choice, ts: Date.now() };
+          try { localStorage.setItem(config.key, JSON.stringify(data)); } catch(e) {}
+          return data;
+        }
+
+        function applyConsent(analytics, ads){
+          if(typeof gtag !== 'function') return;
+          gtag('consent', 'update', {
+            ad_storage: ads ? 'granted' : 'denied',
+            ad_user_data: ads ? 'granted' : 'denied',
+            ad_personalization: ads ? 'granted' : 'denied',
+            analytics_storage: analytics ? 'granted' : 'denied'
+          });
+        }
+
+        function syncSpace(){
+          if(banner.hidden){
+            document.body.classList.remove('consent-visible');
+            document.body.style.removeProperty('--consent-banner-h');
+            return;
+          }
+          document.body.classList.add('consent-visible');
+          document.body.style.setProperty('--consent-banner-h', banner.offsetHeight + 'px');
+        }
+
+        function setPrefsOpen(open){
+          prefs.hidden = !open;
+          prefsBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          syncSpace();
+        }
+
+        function fillPrefs(data){
+          analyticsBox.checked = !!(data && data.analytics);
+          adsBox.checked = !!(data && data.ads);
+        }
+
+        function hideBanner(){
+          banner.hidden = true;
+          prefs.hidden = true;
+          prefsBtn.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('consent-visible');
+          document.body.style.removeProperty('--consent-banner-h');
+        }
+
+        function announce(message){
+          if(!status) return;
+          status.textContent = '';
+          window.setTimeout(function(){ status.textContent = message; }, 50);
+        }
+
+        function showBanner(openPrefs){
+          var data = readConsent();
+          fillPrefs(data);
+          banner.hidden = false;
+          setPrefsOpen(!!openPrefs);
+          syncSpace();
+          if(openPrefs){
+            window.setTimeout(function(){ analyticsBox.focus(); }, 0);
+          }
+        }
+
+        function choose(analytics, ads, choice, message){
+          writeConsent(analytics, ads, choice);
+          applyConsent(analytics, ads);
+          hideBanner();
+          announce(message);
+          if(openTrigger){
+            var trigger = openTrigger;
+            openTrigger = null;
+            trigger.focus();
+          }
+        }
+
+        banner.addEventListener('click', function(event){
+          var button = event.target.closest('[data-consent-action]');
+          if(!button) return;
+          var action = button.getAttribute('data-consent-action');
+          if(action === 'accept'){
+            choose(true, true, 'accept', 'Preferências de cookies salvas. Cookies de análise e publicidade aceitos.');
+          } else if(action === 'reject'){
+            choose(false, false, 'reject', 'Preferências de cookies salvas. Cookies opcionais rejeitados.');
+          } else if(action === 'preferences'){
+            setPrefsOpen(prefs.hidden);
+            if(!prefs.hidden) analyticsBox.focus();
+          } else if(action === 'save'){
+            choose(analyticsBox.checked, adsBox.checked, 'custom', 'Preferências de cookies salvas.');
+          }
+        });
+
+        document.querySelectorAll('[data-consent-open]').forEach(function(trigger){
+          trigger.addEventListener('click', function(){
+            var hadFocus = document.activeElement === trigger;
+            openTrigger = hadFocus ? trigger : null;
+            showBanner(true);
+            if(hadFocus){
+              window.setTimeout(function(){ analyticsBox.focus(); }, 0);
+            }
+          });
+        });
+
+        document.addEventListener('keydown', function(event){
+          if(event.key === 'Escape' && !prefs.hidden){
+            setPrefsOpen(false);
+            prefsBtn.focus();
+          }
+        });
+
+        window.addEventListener('resize', syncSpace);
+        if('ResizeObserver' in window){
+          new ResizeObserver(syncSpace).observe(banner);
+        }
+
+        var stored = readConsent();
+        if(stored){
+          fillPrefs(stored);
+        } else {
+          showBanner(false);
+        }
+      })();
     </script>
 
     <script>

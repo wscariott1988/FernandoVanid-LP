@@ -76,9 +76,10 @@ Recomendações neutras (não são cor de marca):
 
 ### JavaScript e terceiros
 - [ ] `preconnect` para domínios de terceiros (ex.: tag/analytics).
-- [ ] Tags de analytics/ads (gtag) **não bloqueiam**: injetar o script só após
-      interação (`click` / `touchstart`, `{ once: true }`).
-- [ ] Registrar a conversão cedo (`gtag_report_conversion`) sem carregar o gtag ainda.
+- [ ] GTM oficial no `<head>` (async) e Consent Mode v2 com cookies opcionais
+      negados por padrão; o banner de cookies faz o `consent update`.
+- [ ] Conversões e tags de GA4/Ads configuradas no GTM, sem IDs fictícios ou
+      `gtag_report_conversion` no HTML.
 - [ ] Nenhum JS de layout; scripts no fim do `<body>`.
 
 ### Ícones e assets
@@ -112,10 +113,17 @@ Convenções:
 
 ## 5. Convenções de tags de marketing
 
-- Definir `dataLayer`/`gtag()` inline (stub) no `<head>` — **sem** carregar o script.
-- Script real (`gtag.js`) injetado uma única vez, na primeira interação.
-- Cada CTA chama `gtag_report_conversion()` no `onclick`.
-- IDs dos CTAs nomeados (`btn-header-*`, `btn-hero-*`, `btn-*-whatsapp`) para rastreio.
+- GTM oficial no `<head>`, o mais alto possível depois de charset, viewport e do
+  Consent Mode default; snippet `noscript` imediatamente após `<body>`.
+- Consent Mode v2 com `ad_storage`, `analytics_storage`, `ad_user_data` e
+  `ad_personalization` negados por padrão. O banner de preferências faz o
+  `consent update` e persiste a escolha em `localStorage`.
+- Não instalar IDs fictícios de GA4/Google Ads no HTML. Tags e conversões são
+  configuradas no contêiner GTM.
+- Manter IDs estáveis nos CTAs (`btn-header-*`, `btn-hero-*`, `btn-*-whatsapp`)
+  e criar acionadores de clique no GTM; não usar `onclick` com ID de conversão fixo.
+- O GTM carrega imediatamente (async); o custo de TBT deve ser monitorado. Não há
+  mais injeção condicional de `gtag.js` na primeira interação.
 
 ---
 
@@ -320,7 +328,8 @@ Convenções:
 - [ ] Hero pré-carregado com `fetchpriority="high"` + `imagesrcset`/`imagesizes`.
 - [ ] `<img>` do hero com `width`/`height` + `aspect-ratio`.
 - [ ] Imagens em WebP, redimensionadas, arquivos leves.
-- [ ] gtag/terceiros carregam só após interação.
+- [ ] GTM instalado uma vez por página, com `noscript` e Consent Mode default negado;
+      o banner atualiza o consentimento e persiste a escolha.
 - [ ] Ícones em SVG inline; favicon em `data:` URI.
 - [ ] `canonical`, Open Graph e Twitter Card preenchidos com URL absoluta.
 - [ ] CTAs externos com `target="_blank" rel="noopener"`; botões-ícone com `aria-label`.
